@@ -49,3 +49,6 @@ project.objects.get(name= 'name')
 
 ### create superuser
 - python manage.py createsuperuser
+
+### para las imagenes instalar
+python -m pip install Pillow
