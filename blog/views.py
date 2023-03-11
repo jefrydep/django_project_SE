@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from servicios.models import Servicio
 
 # from django.http import HttpResponse
 
@@ -18,9 +19,14 @@ def contacto(request):
 
 
 def servicios(request):
-    title= 'Django Jefry'
+    # title= 'Django Jefry'
+    servicios = Servicio.objects.all()
+    print(servicios)
     return render(request,'servicios.html',{
-        'title':title
+        # 'title':title
+   
+    'servicios':servicios
+   
     })
 
 def tienda(request):

@@ -4,7 +4,7 @@ from django.db import models
 class Servicio (models.Model):
     Titulo=models.CharField(max_length=50)
     Contenido=models.CharField(max_length=50)
-    Imagen=models.ImageField()
+    Imagen=models.ImageField(upload_to='servicios',null=True,blank=True)
     Created= models.DateTimeField(auto_now_add= True)
     Updated=models.DateTimeField(auto_now_add=True)
 
